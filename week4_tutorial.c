@@ -14,8 +14,7 @@ int printHeightDiff(BSTree t){
             return (leftD + 1);
         }
         else return (rightD + 1);
-        int nodeDiff = abs(leftD-rightD);
-        printf("At Node %d, Height difference is %d",t->Value,nodeDiff);
+        printf("At Node %d, Height difference is %d",t->Value,leftD-rightD);
     }       
 }
 
