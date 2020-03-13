@@ -15,17 +15,20 @@ int printHeightDiff(BSTree t){
         }
         else return (rightD + 1);
         int nodeDiff = abs(leftD-rightD);
-        printf("Height difference is %d",nodeDiff);
-    }
+        printf("At Node %d, Height difference is %d",t->Value,nodeDiff);
+    }       
 }
 
 // Q2. return heights ONLY the given binary tree is a height balanced tree.
-/* add following code into Q1.
-if (leftD < 0 || rightD < 0) {
+/* change following code into Q1.
+if (t == NULL) {
+    return 0;
+}
+if (leftD == -99 || rightD == -99) {
     return -99;
 }
 if (nodeDiff >1 ) {
-    leftD = rightD = -99;
+    return -99;
 }
 */
 
@@ -37,6 +40,6 @@ int BSTWidth(BSTree t) {
     else {
         int lC = BSTWidth(t->left);
         int rC = BSTWidth(t->right);
-        return int ans = 3 * (lC + rC + 1);
+        return 3 + lC + rC ;
     }
 }
